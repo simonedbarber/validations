@@ -9,7 +9,7 @@ Validations uses [GORM](https://github.com/jinzhu/gorm) callbacks to handle *val
 ```go
 import (
   "github.com/jinzhu/gorm"
-  "github.com/qor/validations"
+  "github.com/simonedbarber/validations"
 )
 
 func main() {
@@ -56,7 +56,7 @@ db.Create(&User{}).GetErrors() // => []error{"age need to be 18+", "name can't b
 
 ## [Govalidator](https://github.com/asaskevich/govalidator) integration
 
-Qor [Validations](https://github.com/qor/validations) supports [govalidator](https://github.com/asaskevich/govalidator), so you could add a tag into your struct for some common *validations*, such as *check required*, *numeric*, *length*, etc.
+Qor [Validations](https://github.com/simonedbarber/validations) supports [govalidator](https://github.com/asaskevich/govalidator), so you could add a tag into your struct for some common *validations*, such as *check required*, *numeric*, *length*, etc.
 
 ```
 type User struct {
@@ -70,7 +70,7 @@ type User struct {
 
 ## Customize errors on form field
 
-If you want to display errors for each form field in [QOR Admin](http://github.com/qor/admin), you could register your error like this:
+If you want to display errors for each form field in [QOR Admin](http://github.com/simonedbarber/admin), you could register your error like this:
 
 ```go
 func (user User) Validate(db *gorm.DB) {
